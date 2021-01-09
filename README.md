@@ -20,7 +20,7 @@ Admin Giriş Bilgileri
 
 ## Kullanım
 
-- http://localhost:8088/ ( Anasayfada ) Sistemdeki tüm kategoriler nested bir şekilde listelenmektedir, kategorilerden birine tıklandığında o kategori ve alt kategorilerine ait ürünler sayfalı bir şekilde listelenmektedir.
+- http://localhost:8088/ ( Anasayfada ) Sistemdeki tüm kategoriler nested bir şekilde listelenmektedir, kategorilerden birine tıklandığında o kategori ve alt kategorilerine ait ürünler sayfalı bir şekilde listelenmektedir. Sayfa yenilenmelerinde ürünler cache'den çekilecek şekilde tasarlanmıştır, admin panelden yapılan ürün güncellemelerinde cache temizlenmektedir.
 
 - Admin panel'den aşağıdaki işlemler yapılmaktadır; 
   - Kategori Ekleme
