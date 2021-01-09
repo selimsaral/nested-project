@@ -21,7 +21,7 @@ class ProductController extends Controller
 
     public function create()
     {
-        $categories = Cache::remember('categories', 86400, function () {
+        $categories = Cache::remember('categories', now()->addDays(1), function () {
             return Category::all();
         });
 
@@ -37,7 +37,7 @@ class ProductController extends Controller
 
     public function edit(Product $product)
     {
-        $categories = Cache::remember('categories', 86400, function () {
+        $categories = Cache::remember('categories', now()->addDays(1), function () {
             return Category::all();
         });
 

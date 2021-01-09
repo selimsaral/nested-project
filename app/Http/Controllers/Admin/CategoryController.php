@@ -20,7 +20,7 @@ class CategoryController extends Controller
 
     public function create()
     {
-        $categories = Cache::remember('categories', 86400, function () {
+        $categories = Cache::remember('categories', now()->addDays(1), function () {
             return Category::all();
         });
 
@@ -38,7 +38,7 @@ class CategoryController extends Controller
 
     public function edit(Category $category)
     {
-        $categories = Cache::remember('categories', 86400, function () {
+        $categories = Cache::remember('categories', now()->addDays(1), function () {
             return Category::all();
         });
 

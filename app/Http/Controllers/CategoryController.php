@@ -11,7 +11,7 @@ class CategoryController extends Controller
 {
     public function index()
     {
-        $categories = Cache::remember('categories-nested', 86400, function () {
+        $categories = Cache::remember('categories-nested', now()->addDays(1), function () {
             return Category::with('recursiveChildren')->whereNull('parent_id')->get();
         });
 
@@ -26,7 +26,7 @@ class CategoryController extends Controller
 
         $categoryIds = Helper::nestedToArray($category, 'id');
 
-        $products = Cache::remember('products_with_' . implode($categoryIds), 86400, function () use ($categoryIds) {
+        $products = Cache::remember('products_with_' . implode($categoryIds), now()->addDays(1), function () use ($categoryIds) {
             return Product::whereIn('category_id', $categoryIds)->paginate(10);
         });
 
