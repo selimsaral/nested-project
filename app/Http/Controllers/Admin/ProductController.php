@@ -32,6 +32,8 @@ class ProductController extends Controller
     {
         Product::create($request->toArray());
 
+        Cache::forget('products_with_*');
+
         return redirect()->route('admin-product-list');
     }
 
@@ -49,6 +51,8 @@ class ProductController extends Controller
         $product->name        = $request->name;
         $product->category_id = $request->category_id;
         $product->save();
+
+        Cache::forget('products_with_*');
 
         return redirect()->route('admin-product-list');
     }
