@@ -31,3 +31,7 @@ Admin Giriş Bilgileri
   - Ürün Güncelleme
 
 - Modeller aracılığı ile yapılan tüm işlemler database'deki logs tablosunda tutulamktadır. **( Admin panelde logların görüneceği bir alan yok )**
+
+
+## Analiz
+/telescope adresinden proje içerisinde çalışan sql sorgularını ve cache içeriklerini gözlemleyebilirsiniz.
