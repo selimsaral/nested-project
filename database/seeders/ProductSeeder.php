@@ -18,7 +18,7 @@ class ProductSeeder extends Seeder
         $categories = Category::all();
 
         foreach ($categories as $category) {
-            Product::factory(10)->setCategoryId($category->id)->create();
+            Product::factory(3000)->setCategoryId($category->id)->create();
         }
     }
 }
