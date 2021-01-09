@@ -4,7 +4,7 @@
 - composer install
 - .env dosyasının ayarlanması.
 - docker-compose exec app php artisan migrate
-- docker-compose exec app php artisan db:seed
+- docker-compose exec app php -d memory_limit=-1 artisan db:seed ( 2.220 Adet Kategori, her bir kategori için 3.000 ürün oluşturmaktadır, biraz uzun sürebilir. )
 - docker-compose exec app php artisan queue:work ( cache driver redis,database vs. ayarlandığı durumda kullanılmalı )
 
 
