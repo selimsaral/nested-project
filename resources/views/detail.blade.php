@@ -21,7 +21,7 @@
 <div class="container mt-4">
     <div class="row">
 
-        <h3>Ürünler</h3>
+        <h3>Ürünler ( Toplam Ürün Sayısı: {{ $products->total() }})</h3>
 
         <div class="col-md-12">
             <ul>
